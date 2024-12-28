@@ -1,0 +1,52 @@
+[
+    {
+        "name" : "Water",
+        "price" : 2.5,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "Cocktail",
+        "price" : 3.0,
+        "image" : "img/cocktail.jpg"
+    },
+    {
+        "name" : "Spätzle",
+        "price" : 5.0,
+        "image" : "img/spaetzle.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    },
+    {
+        "name" : "A",
+        "price" : 1,
+        "image" : "img/water.jpg"
+    }
+]
