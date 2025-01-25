@@ -1,44 +1,138 @@
-main {
-    margin: 0 20%
+:root {
+    --main-color: black;
+    /* --main-color: white; */
+    --text-color: white;
+    /* --text-color: black; */
+    --accent-color1: #4CAF50;
+    --accent-color2: #45a049;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    padding: 20px;
+body {
+    font-family: Monospace, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--main-color);
 }
 
-.product {
-    min-width: 150px;
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.counterDiv {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#items {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch; /* Ensures all items in a row have the same height */
 }
 
-.product.clicked {
-    transform: scale(0.9);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.item {
+    display: grid;
+    align-items: start;
+    /* height: 20rem; */
+    height: auto;
+    width: 20rem;
+    font-size: 1.5rem;
+    background-color: var(--accent-color1);
+    overflow: hidden;
+    border-radius: 2rem;
 }
 
-.product img {
-    width: 100%;
-    height: 150px;
+.item label {
+    grid-row: 1;
+    padding: 1rem;
+    text-align: center;
+    background-color: none;
+}
+
+.item img {
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 20rem;
 }
 
-.product h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+.content {
+    grid-row: 2;
+    text-align: center; /* Centers the text */
+    color: var(--text-color); /* Matches the theme text color */
+    align-self: end;
 }
 
-.product p {
-    font-size: 14px;
-    margin-bottom: 20px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divides into 3 equal columns */
+    text-align: center;
+}
+
+.quantity {
+    grid-column: 2;
+    width: 50px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+button {
+    /* padding: 1rem; */
+    padding-bottom: 10px;
+    background-color: var(--accent-color1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 4rem;
+}
+
+button:hover {
+    /* background-color: var(--accent-color2); */
+}
+
+.btn-l {
+    grid-column: 1;
+    background-color: none;
+    font-weight: bold;
+}
+
+.btn-r {
+    grid-column: 3;
+    background-color: none;
+    font-weight: bold;
+}
+
+.submit {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.submit button {
+    border-radius: 1rem;
+}
+
+#order-summary {
+    margin-top: 20px;
+}
+
+footer {
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: grey;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+footer button {
+    font-size: 1rem;
+    margin: 0;
+    padding: 5px;
+    background-color: red;
 }

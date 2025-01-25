@@ -1,52 +1,72 @@
 [
     {
-        "name" : "Water",
+        "name" : "Brezel",
+        "price" : 1.5,
+        "image" : "img/brezel.jpg"
+    },
+    {
+        "name" : "Kuchen / Muffins + Sahne",
+        "price" : 1.5,
+        "image" : "img/kuchen.jpg"
+    },
+    {
+        "name" : "Crepe",
+        "price" : 2.0,
+        "image" : "img/crepe.jpg"
+    },
+    {
+        "name" : "Crepe + Belag",
         "price" : 2.5,
-        "image" : "img/water.jpg"
+        "image" : "img/crepe_2.jpg"
     },
     {
-        "name" : "Cocktail",
-        "price" : 3.0,
-        "image" : "img/cocktail.jpg"
+        "name" : "Spieß",
+        "price" : 1.0,
+        "image" : "img/spiess.jpg"
     },
     {
-        "name" : "Spätzle",
-        "price" : 5.0,
-        "image" : "img/spaetzle.jpg"
-    },
-    {
-        "name" : "A",
+        "name" : "Riegel",
         "price" : 1,
-        "image" : "img/water.jpg"
+        "image" : "img/riegel.jpg"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Süßes",
+        "price" : 0.5,
+        "image" : "img/suesses.jpg"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Nudelsalat (veg.)",
+        "price" : 2.0,
+        "image" : "img/nudelsalat.jpg"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Wiener + Brötchen",
+        "price" : 2.5,
+        "image" : "img/wiener.jpg"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Softdrinks",
+        "price" : 1.5,
+        "image" : "img/cola.png"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Wasser",
+        "price" : 1.0,
+        "image" : "img/wasser.png"
     },
     {
-        "name" : "A",
-        "price" : 1,
-        "image" : "img/water.jpg"
+        "name" : "Saft",
+        "price" : 1.5,
+        "image" : "img/saft.jpg"
+    },
+    {
+        "name" : "Kinderpunsch",
+        "price" : 2.0,
+        "image" : "img/kinderpunsch.jpg"
+    },
+    {
+        "name" : "Kaffee",
+        "price" : 1.5,
+        "image" : "img/kaffee.jpg"
     }
 ]
