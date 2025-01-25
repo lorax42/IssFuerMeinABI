@@ -2,17 +2,32 @@ let orderCount = localStorage.getItem('orderCount')
     ? parseInt(localStorage.getItem('orderCount')) 
     : 0;
 
+function zoomanimation(animItem) {
+    // Add the animation class to the item
+    animItem.classList.add('item-animate');
+
+    // Remove the animation class after the animation duration (300ms)
+    setTimeout(() => {
+        animItem.classList.remove('item-animate');
+    }, 300); // Match the duration in your CSS transition
+}
+
 function updateQuantity(button, change) {
     const itemDiv = button.parentElement;
     const quantitySpan = itemDiv.querySelector('.quantity');
+    const parentItem = itemDiv.closest('.item');
     let quantity = parseInt(quantitySpan.textContent);
 
     // Update the quantity, ensuring it doesn't go below 0
     quantity = Math.max(0, quantity + change);
     quantitySpan.textContent = quantity;
+
+    zoomanimation(parentItem);
 }
 
 function submitOrder() {
+    zoomanimation(document.getElementById("submit"));
+
     const items = document.querySelectorAll('#items .item');
     const orders = [];
 
@@ -50,7 +65,7 @@ function submitOrder() {
     })
         .then(response => response.json())
         .then(data => {
-            // document.getElementById('order-summary').innerHTML = `<p>${data.message}</p>`;
+            document.getElementById('order-summary').innerHTML = `<p>${data.message}</p>`;
         })
         .catch(err => {
             console.error(err);
@@ -60,6 +75,12 @@ function submitOrder() {
 }
 
 function clearCounter() {
+    zoomanimation(document.getElementById("clearCounter"));
+
+    if(!confirm("Kundinnenzähler zurücksetzen?")) {
+        return 1;
+    }
+
     orderCount = 0;
     localStorage.setItem('orderCount', "0");
     document.getElementById('counter').innerHTML = orderCount;

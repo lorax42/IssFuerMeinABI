@@ -16,13 +16,21 @@
         </div>
 
         <div class="submit">
-            <button onclick="submitOrder()">Bestellen</button>
+            <button id="submit" onclick="submitOrder()">Bestellen</button>
         </div>
 
-        <!-- <div id="order-summary"></div> -->
-
         <footer>
-            <button onclick="clearCounter()">Zähler zurücksetzen</button>
+            <div id="order-summary">order summary</div>
+            <div>
+                <button id="clearCounter" onclick="clearCounter()">Zähler zurücksetzen</button>
+            </div>
+            <div>
+                <ul style="list-style: none">
+                    <li>&copy; lorax 2025</li>
+                    <li>GPL v3</li>
+                    <li><a href="https://www.github.com/lorax42/IssFuerMeinABI">GitHub</a></li>
+                </ul>
+            </div>
         </footer>
 
         <script src="js/script.js"></script>
