@@ -1,18 +1,28 @@
 :root {
     --main-color: black;
-    /* --main-color: white; */
     --text-color: white;
-    /* --text-color: black; */
-    --accent-color1: #4CAF50;
-    --accent-color2: #45a049;
+    --accent-color1-opaque: rgba(0, 0, 0, 0.5);
 }
 
 body {
     font-family: Monospace, sans-serif;
     font-size: 1rem;
+    min-height: 100vh;
     margin: 0;
     color: var(--text-color);
-    background-color: var(--main-color);
+
+    /* background-color: var(--main-color); */
+    background-image: radial-gradient(circle at bottom left, black, purple, pink);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    display: grid;
+}
+
+#top-row {
+    grid-row: 1;
 }
 
 h1 {
@@ -25,12 +35,17 @@ h1 {
     margin-bottom: 2rem;
 }
 
+#middle-row {
+    grid-row: 2;
+}
+
 #items {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: stretch; /* Ensures all items in a row have the same height */
+    align-items: stretch;
+    /* Ensures all items in a row have the same height */
 }
 
 .item {
@@ -40,13 +55,15 @@ h1 {
     height: auto;
     width: 20rem;
     font-size: 1.5rem;
-    background-color: var(--accent-color1);
+    background-color: var(--accent-color1-opaque);
+    backdrop-filter: blur(5px);
     overflow: hidden;
     border-radius: 2rem;
 
     /* reset animation */
     transform: scale(1.0);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add a soft shadow */
     transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -66,20 +83,24 @@ h1 {
 
 .item-animate {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add a soft shadow */
     transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .content {
     grid-row: 2;
-    text-align: center; /* Centers the text */
-    color: var(--text-color); /* Matches the theme text color */
+    text-align: center;
+    /* Centers the text */
+    color: var(--text-color);
+    /* Matches the theme text color */
     align-self: end;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Divides into 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Divides into 3 equal columns */
     text-align: center;
 }
 
@@ -94,11 +115,11 @@ h1 {
 button {
     /* padding: 1rem; */
     padding-bottom: 10px;
-    background-color: var(--accent-color1);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 4rem;
+    background-color: var(--accent-color1-opaque);
 
     /* reset animation */
     transform: scale(1.0);
@@ -114,12 +135,14 @@ button:hover {
     grid-column: 1;
     background-color: none;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-r {
     grid-column: 3;
     background-color: none;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .submit {
@@ -129,11 +152,12 @@ button:hover {
 
 #submit {
     border-radius: 1rem;
+    backdrop-filter: blur(5px);
 }
 
-#order-summary {
-    margin: 20px 0;
-    font-family: Monospace;
+#bottom-row {
+    grid-row: 3;
+    align-self: end;
 }
 
 footer {
@@ -142,10 +166,11 @@ footer {
     background-color: grey;
     padding: 1rem;
     text-align: center;
-    margin: 0;
     margin-top: 2rem;
     position: absolute;
     width: 100%;
+
+    background-color: var(--accent-color1-opaque);
 
     display: flex;
     flex-wrap: wrap;
@@ -154,9 +179,17 @@ footer {
     gap: 5rem;
 }
 
+#order-summary {
+    font-family: Monospace;
+}
+
 #clearCounter {
     font-size: 1rem;
     margin: 0;
     padding: 5px;
     background-color: red;
+}
+
+#info {
+    text-align: center;
 }

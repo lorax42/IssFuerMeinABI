@@ -8,30 +8,37 @@
         <link rel="stylesheet" type="text/css"  href="css/style.css">
     </head>
     <body>
-        <h1>Iss Für Mein ABI</h1>
-        <h2 class="counterDiv">Zähler <span id="counter">0</span></h2>
-
-        <div id="items">
-            <?php echo $grid ?>
+        <div id="top-row">
+            <h1>Iss Für Mein ABI</h1>
+            <h2 class="counterDiv">Zähler <span id="counter">0</span></h2>
         </div>
 
-        <div class="submit">
-            <button id="submit" onclick="submitOrder()">Bestellen</button>
+        <div id="middle-row">
+            <div id="items">
+                <?php echo $grid ?>
+            </div>
+
+            <div class="submit">
+                <button id="submit" onclick="submitOrder()">Bestellen</button>
+            </div>
         </div>
 
-        <footer>
-            <div id="order-summary">order summary</div>
-            <div>
-                <button id="clearCounter" onclick="clearCounter()">Zähler zurücksetzen</button>
-            </div>
-            <div>
-                <ul style="list-style: none">
-                    <li>&copy; lorax 2025</li>
-                    <li>GPL v3</li>
-                    <li><a href="https://www.github.com/lorax42/IssFuerMeinABI">GitHub</a></li>
-                </ul>
-            </div>
-        </footer>
+        
+        <div id="bottom-row">
+            <footer>
+                <div id="order-summary">order summary</div>
+                <div>
+                    <button id="clearCounter" onclick="clearCounter()">Zähler zurücksetzen</button>
+                </div>
+                <div>
+                    <div id="info" style="list-style: none">
+                        &copy; lorax 2025<br>
+                        GPL v3<br>
+                        <a href="https://www.github.com/lorax42/IssFuerMeinABI">GitHub</a><br>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
         <script src="js/script.js"></script>
     </body>
