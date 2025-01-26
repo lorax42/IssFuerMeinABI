@@ -2,6 +2,8 @@ let orderCount = localStorage.getItem('orderCount')
     ? parseInt(localStorage.getItem('orderCount')) 
     : 0;
 
+document.getElementById('counter').innerHTML = orderCount;
+
 function zoomanimation(animItem) {
     // Add the animation class to the item
     animItem.classList.add('item-animate');
