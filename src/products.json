@@ -1,48 +1,23 @@
 [
     {
-        "name" : "Brezel",
-        "price" : 1.5,
-        "image" : "img/brezel.jpg"
-    },
-    {
-        "name" : "Kuchen / Muffins + Sahne",
-        "price" : 1.5,
-        "image" : "img/kuchen.jpg"
-    },
-    {
-        "name" : "Crepe",
-        "price" : 2.0,
-        "image" : "img/crepe.jpg"
-    },
-    {
-        "name" : "Crepe + Belag",
+        "name" : "Belegtes Brötchen",
         "price" : 2.5,
-        "image" : "img/crepe_2.jpg"
+        "image" : "img/belegtes_broetchen.jpg"
     },
     {
-        "name" : "Spieß",
-        "price" : 1.0,
-        "image" : "img/spiess.jpg"
-    },
-    {
-        "name" : "Riegel",
-        "price" : 1,
-        "image" : "img/riegel.jpg"
-    },
-    {
-        "name" : "Süßes",
-        "price" : 0.5,
-        "image" : "img/suesses.jpg"
-    },
-    {
-        "name" : "Nudelsalat (veg.)",
+        "name" : "Nudelsalat",
         "price" : 2.0,
         "image" : "img/nudelsalat.jpg"
     },
     {
-        "name" : "Wiener + Brötchen",
-        "price" : 2.5,
-        "image" : "img/wiener.jpg"
+        "name" : "Spieß",
+        "price" : 0.5,
+        "image" : "img/spiess.jpg"
+    },
+    {
+        "name" : "Kuchen",
+        "price" : 1.5,
+        "image" : "img/kuchen.jpg"
     },
     {
         "name" : "Softdrinks",
@@ -50,23 +25,8 @@
         "image" : "img/cola.png"
     },
     {
-        "name" : "Wasser",
-        "price" : 1.0,
-        "image" : "img/wasser.png"
-    },
-    {
-        "name" : "Saft",
-        "price" : 1.5,
-        "image" : "img/saft.jpg"
-    },
-    {
-        "name" : "Kinderpunsch",
-        "price" : 2.0,
-        "image" : "img/kinderpunsch.jpg"
-    },
-    {
         "name" : "Kaffee",
-        "price" : 1.5,
+        "price" : 2.0,
         "image" : "img/kaffee.jpg"
     }
 ]
