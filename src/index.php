@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>School Fundraiser</title>
+        <title>Iss Für Mein ABI</title>
         <link rel="stylesheet" type="text/css"  href="css/style.css">
     </head>
     <body>
@@ -19,21 +19,25 @@
             </div>
 
             <div class="submit">
-                <button id="submit" onclick="submitOrder()">Bestellen</button>
+                <ul id="btn-ul">
+                    <li><button id="submit" onclick="submitOrder()">Bestellen</button></li>
+                    <li><div id="sum">0</div></li>
+                    <li><button id="take-back" onclick="removeLastOrder()">letzte Bestellung zurücksetzen</button></li>
+                </ul>
             </div>
         </div>
 
         
         <div id="bottom-row">
             <footer>
-                <div id="order-summary">order summary</div>
+                <div id="order-summary">[order summary]</div>
                 <div>
                     <button id="clearCounter" onclick="clearCounter()">Zähler zurücksetzen</button>
                 </div>
                 <div>
                     <div id="info" style="list-style: none">
                         &copy; lorax 2025<br>
-                        GPL v3<br>
+                        GPL V3<br>
                         <a href="https://www.github.com/lorax42/IssFuerMeinABI">GitHub</a><br>
                     </div>
                 </div>

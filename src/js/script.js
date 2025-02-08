@@ -27,11 +27,27 @@ function updateQuantity(button, change) {
     zoomanimation(parentItem);
 }
 
+function showLastOrders() {
+    fetch('../php/show_last_orders.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('order-summary').innerHTML = `${data.message}`;
+        })
+        .catch(err => {
+            console.error(err);
+            alert('An error occurred while getting previous orders.');
+        });
+}
+
 function submitOrder() {
     zoomanimation(document.getElementById("submit"));
 
     const items = document.querySelectorAll('#items .item');
     const orders = [];
+    let priceSum = 0.0;
 
     items.forEach(itemDiv => {
         const quantitySpan = itemDiv.querySelector('.quantity');
@@ -43,6 +59,7 @@ function submitOrder() {
                 quantity: quantity
             });
             quantitySpan.textContent = 0;
+            priceSum += quantity * parseFloat(itemDiv.getAttribute('data-price'));
         }
     });
 
@@ -67,13 +84,36 @@ function submitOrder() {
     })
         .then(response => response.json())
         .then(data => {
-            document.getElementById('order-summary').innerHTML = `<p>${data.message}</p>`;
+            console.log(`${data.message}`);
         })
         .catch(err => {
             console.error(err);
             alert('An error occurred while submitting the order.');
         });
+    showLastOrders();
     document.getElementById('counter').innerHTML = orderCount;
+    document.getElementById('sum').innerHTML = priceSum;
+}
+
+function removeLastOrder() {
+    zoomanimation(document.getElementById("submit"));
+
+    if(!confirm("Letzte Bestellung zurücksetzen?")) {
+        return 1;
+    }
+
+    fetch('../php/take_back_last_order.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    })
+        .then(data => {
+            console.log(`${data.message}`);
+        })
+        .catch(err => {
+            console.error(err);
+            alert('An error occurred while removing the last order order.');
+        });
+    showLastOrders();
 }
 
 function clearCounter() {

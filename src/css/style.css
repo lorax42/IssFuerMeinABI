@@ -145,19 +145,52 @@ button:hover {
     background-color: rgba(0, 0, 0, 0);
 }
 
+#bottom-row {
+    grid-row: 3;
+    align-self: end;
+}
+
+#btn-ul {
+    list-style: none;
+    padding: none;
+}
+
+#btn-ul li {
+    margin: 10px;
+}
+
 .submit {
     margin-top: 2rem;
     text-align: center;
 }
 
 #submit {
-    border-radius: 1rem;
+    padding: 0.25em;
+    border-radius: 2rem;
     backdrop-filter: blur(5px);
+    background-color: #cf3cb0;
 }
 
-#bottom-row {
-    grid-row: 3;
-    align-self: end;
+#take-back {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkorange;
+}
+
+#sum {
+    font-size: 1.5rem;
+}
+
+#sum:after {
+    content: "€";
+    color: grey;
+}
+
+#sum:before {
+    content: "letzte Bestellung: ";
+    color: grey;
 }
 
 footer {
@@ -174,13 +207,16 @@ footer {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5rem;
+    column-gap: 10rem;
+    row-gap: 5rem;
 }
 
 #order-summary {
     font-family: Monospace;
+    text-align: left;
+    color: green;
 }
 
 #clearCounter {
@@ -192,4 +228,8 @@ footer {
 
 #info {
     text-align: center;
+}
+
+#info a {
+    color: pink;
 }
