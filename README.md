@@ -25,3 +25,8 @@ Then enter `localhost:8080/index.php` in your browser.
 
 You can find a list of the purchases in `orders.csv`
 in the format `"Order ID", Item, Price, Quantity, Timestamp`.
+
+## TODO
+
+* [x] take back the last order
+* [x] fenster mit letzten 3 Zeilen aus dem Dokument
